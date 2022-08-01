@@ -1,0 +1,13 @@
+figure{
+    position: relative;
+    left: 120px;
+}
+
+figcaption{
+    position: relative;
+    left: 90px;
+    font-size: 25px;
+}
+body{
+    background: #0f2027;
+}

@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="C:\Users\Cirruslabs\Downloads\bootstrap.min.css">
+    <link rel="stylesheet" href="carstyle.css">
+    <link rel="stylesheet" href="C:\Users\Cirruslabs\Downloads\jquery-3.3.1.slim.min.js">
+    <link rel="stylesheet" href="C:\Users\Cirruslabs\Downloads\popper.min.js">
+   
+    <title>car Bookings</title>
+    
+  </head>
+  
+  <script >
+    function validation1() {
+      var name =
+        document.forms.form.Name.value;
+        var phone =
+        document.forms.form.Telephone.value;
+      var email =
+        document.forms.form.Email.value;
+      var date =
+        document.forms.form.Date.value;
+      var area =
+        document.forms.form.Area.value; 
+        var city =
+        document.forms.form.City.value;  
+        var state=
+        document.forms.form.State.value;    
+
+      var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
+      var regPhone=/^\d{10}$/;                                        // Javascript reGex for Phone Number validation.
+      var regName = /\d+$/g;                                    // Javascript reGex for Name validation
+  
+      if (name == "" || regName.test(name)) {
+        window.alert("Please enter your name properly.");
+        //name.focus();
+        return false;
+      }
+      if (phone == "" || !regPhone.test(phone)) {
+        alert("Please enter valid phone number.");
+        //phone.focus();
+        return false;
+      }
+       
+      if (email == "" || !regEmail.test(email)) {
+        window.alert("Please enter a valid e-mail address.");
+        //email.focus();
+        return false;
+      }
+      if (date == "" || !regDate.test(date)) {
+        window.alert("Please enter exact date.");
+        //email.focus();
+        return false;
+      }
+      if (area == "" || !regArea.test(area)) {
+        window.alert("Please enter a valid area.");
+        //area.focus();
+        return false;
+      }
+      if (city == "" || !regCity.test(city)) {
+        window.alert("Please enter a valid city.");
+        //area.focus();
+        return false;
+      }
+      if (state == "" || !regState.test(state)) {
+        window.alert("Please enter a valid state.");
+        //area.focus();
+        return false;
+      }
+      return true;
+    }
+  
+  </script>
+  <body>
+    
+    <form id="form" onsubmit="return validation1()" method="post" action="thanks.html">
+    <div class="inner-layer">
+      <div class="container">
+        <div class="row no-margin">
+          <div class="col-sm-7">
+            <div class="content">
+              <h1>Welcome To Bugatti Car Showroom</h1>
+            </div>
+
+          </div>
+          <div class="col-sm-5">
+            <div class="form-data">
+              <div class="form-head">
+             <h2>Book Your Favourite Car</h2>
+              </div>
+              <div class="form-body">
+                <div class="row form-row">
+                  <input type="text" name="Name" placeholder="Enter Full name" class="form-control">
+
+
+                </div>
+                <div class="row form-row">
+                  
+                  
+                  <input type="phone" name="Telephone" placeholder="Enter Mobile Number" class="form-control">
+
+
+                </div>
+                <div class="row form-row">
+                  <input type="text" name="Email" placeholder="Enter Email Address" class="form-control">
+
+
+                </div>
+            
+              <div class="row form-row">
+                <input id="date" name="Date" onfocus="(this.type='date')" placeholder="Booking Date" class="form-control">
+
+              </div>
+              <h6>Address Details</h6>
+                  <div class="row form-row">
+                    <!-- <div class="col-sm-6"> -->
+                      <input type="text" name="Area" placeholder="Enter Area" class="form-control">
+
+                    </div>
+                     <div class="row form-row">
+                      <input type="text" name="City" placeholder="Enter City" class="form-control">
+
+                    </div>
+              <!-- </div> -->
+              <div class="row form-row">
+                <!-- <div class="col-sm-6"> -->
+                  <input type="text" name="State" placeholder="Enter State" class="form-control">
+
+                </div>
+                <div class="row form-row">
+                  <input type="text" name="Code" placeholder="Postal Code" class="form-control">
+
+                </div>
+          <!-- </div> -->
+        
+            <label for="cars">Choose a car:</label>
+            <select name="cars" id="cars">
+              <option value="veyron">Bugatti Veyron</option>
+              <option value="chiron">Bugatti Chiron</option>
+              <option value="divo">Bugatti Divo</option>
+              <option value="bolide">Bugatti Bolide</option>
+            </select>
+            <br><br>
+          
+                  <div class="row form-row">
+          <a href="thanks.html">
+          <button class="btn btn-success btn-car">Book a Car</button>
+          </a>
+    <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+ <script src="C:\Users\Cirruslabs\Downloads\jquery-3.3.1.slim.min.js"></script>
+ <script src="C:\Users\Cirruslabs\Downloads\popper.min.js"></script>
+ <script src="C:\Users\Cirruslabs\Downloads\bootstrap.min.js"></script>
+ <script src="C:\Users\Cirruslabs\Downloads\bootstrap-datepicker.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $("#dat").datepicker();
+
+  })
+
+</script>
+
+  </body>
+</html>

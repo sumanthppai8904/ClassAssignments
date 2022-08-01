@@ -1,0 +1,201 @@
+<html>
+<head>
+
+    <title>Register Now</title>
+  
+  
+<script>
+function validation1() {
+    var name =
+        document.forms.form.Name.value;
+    var email =
+        document.forms.form.EMail.value;
+    var phone =
+        document.forms.form.Telephone.value;
+  
+    var password =
+        document.forms.form.Password.value;
+    var address =
+        document.forms.form.Address.value;
+    var gender =
+        document.forms.form.Gender.value;    
+    var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
+    var regPhone=/^\d{10}$/;                                        // Javascript reGex for Phone Number validation.
+    var regName = /\d+$/g;                                    // Javascript reGex for Name validation
+
+    if (name == "" || regName.test(name)) {
+        window.alert("Please enter your name properly.");
+        name.focus();
+        return false;
+    }
+
+    if (address == "") {
+        window.alert("Please enter your address.");
+        address.focus();
+        return false;
+    }
+     
+    if (email == "" || !regEmail.test(email)) {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+      
+    if (password == "") {
+        alert("Please enter your password");
+        password.focus();
+        return false;
+    }
+
+    if(password.length <6){
+        alert("Password should be atleast 6 character long");
+        password.focus();
+        return false;
+
+    }
+    if (phone == "" || !regPhone.test(phone)) {
+        alert("Please enter valid phone number.");
+        phone.focus();
+        return false;
+    }
+    if (gender == "") {
+        alert("Please enter your gender");
+        gender.focus();
+        return false;
+    }
+
+    return true;
+}
+</script>
+    <style>
+        body{
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        #form{
+            width: 300px;
+            margin: 20vh auto 0 auto;
+            padding: 20px;
+            background-color: whitesmoke;
+            border-radius: 4px;
+            font-size: 12px;
+             text-align: center; 
+        }
+        
+        #form h1{
+            color: #0f2027;
+            text-align: center;
+        }
+        
+        #form button{
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            color: white;
+            background-color: rgb(41, 57, 194);
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .input-control{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .input-control input{
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            font-size: 12px;
+            padding: 10px;
+            width: 100%;
+           
+        }
+        .input
+        {
+            left: 15px;
+        }
+        .input-control input:focus{
+            outline: 0;
+        }
+        
+        .input-control.success input{
+            border-color: #09c372;
+        }
+        
+        .input-control.error input{
+            border-color: #ff3860;
+        }
+        
+        .input-control .error{
+            color: #ff3860;
+            font-size: 9px;
+            height: 13px;
+        }
+    
+
+        
+    </style>
+</head>  
+
+
+<body>
+
+
+<form id="form" onsubmit="return validation1()" method="post">
+    <h1>Create Your Account</h1>
+  
+    
+    <label for="html">Name:</label>
+<input style=" position: relative; right:32px; float: right;" type="text" placeholder="Enter Name" name="Name" />
+<br> 
+<br >
+ <br>
+ <label for="html">Address:</label>
+ <input style=" position: relative; right:32px;
+ float: right;" type="text" placeholder="Enter Address" name="Address" />
+  <br>
+  <br>
+  <br>
+  <label for="html">Email:</label>
+ 
+ <input style=" position: relative; right:32px;
+ float: right;" type="text" placeholder="Enter Email" name="EMail" />
+ <br>
+ <br>
+ <br>
+ <label for="html">Password:</label>
+ <input style=" position: relative; right:32px;
+ float: right;" type="password" placeholder="Enter Password" name="Password" />
+ <br>
+ <br>
+ <br>
+ <label for="html">Number:</label>
+ <input style=" position: relative; right:32px;
+ float: right;" type="text" placeholder="Enter Number" name="Telephone" />
+ <br>
+ <br>
+ <br>
+<label for="html">Gender: </label>
+<input type="radio" name="Gender" value="male"> Male
+<input type="radio" name="Gender" value="female"> Female
+
+ 
+            <br >
+            <br>
+            <br>
+             
+
+
+                <input type="submit"
+                    value="Sign Up" name="Submit" />
+                <input type="reset"
+                    value="Reset" name="Reset" />
+            
+ 
+        </form>
+    </body>
+
+</body> 
+</html>

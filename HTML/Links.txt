@@ -1,0 +1,34 @@
+<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>  
+            </svg></a></li>
+<form>
+     		<label for="username" style="color: white"><b>Email :</b></label><br/>
+				<input type="text" name="username" id="username" />
+				<br/><br/>
+
+				<label for="password" style="color: white"><b>Password :</b></label>
+				<br/>
+				<input type="password" name="password" id="password" />
+				
+				</form>
+
+				<br/><br/>
+                 <a href="carbook.html">
+				<button type="submit" id="login-btn">Login</button>
+				</a>
+			
+                 <br>
+				 <br>
+				 <a href="E:\HTML\Login.html">
+				<button type="submit" id="login-btn">Register New User</button>
+			  </a>
+				<br/><br/>
+				<p style="color: white">Forgot Password ? <a href="E:\HTML\forgetpass.html">
+					<button type="submit">Click Here</button></a>
+				</p>	
+				
+
+				
+     	
+     </div>
+    </div>
